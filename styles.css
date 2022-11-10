@@ -215,7 +215,13 @@ body.dark .header, .content, .footer{
 
 
 #feedback-form{
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#feedback-form h1, h2{
+    justify-self: center;
 }
 
 .footer{
