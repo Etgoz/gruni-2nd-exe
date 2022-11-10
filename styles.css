@@ -21,15 +21,60 @@
     background-color: var(--light);
     padding: 5px;
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 4fr 1fr;
-    grid-template-areas:  
-        "header header"
-        "sidebar content"
-        "footer footer";
-    gap: 7px;
+@media screen and (min-width: 768px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 15vh 70vh 10vh;
+        grid-template-areas:  
+            "header header"
+            "sidebar content"
+            "footer footer";
+        gap: 7px;
+    }
+
+    .sidebar{
+        max-width: 1fr;
+        background-color: var(--primary-dark-var);
+    }
+
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        grid-area: "sidebar";
+        list-style-type: none;
+        text-align: center;
+        height: 100%;
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+        -webkit-text-stroke: 1px var(--dark);
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar{
+        background-color: var(--primary-dark-var);
+    }
+
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        grid-area: "sidebar";
+        list-style-type: none;
+        text-align: center;
+        height: 100%;
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+        -webkit-text-stroke: 1px var(--dark);
+    }
 }
 
 .header, .sidebar, .content, .footer{
@@ -57,35 +102,16 @@
 }
 
 #user-icon{
-    height: 3em;
-    background-color: rgba(255, 255, 255, 0.616);
+    height: 3.5em;
+    background-color:var(--primary-light-var);
     border-radius: 50%;
     padding: 0.5em;
-}
-
-.sidebar{
-    max-width: 1fr;
-    background-color: var(--primary-dark-var);
 }
 
 .content{
     display: grid;
     place-content: center;
     text-align: center;
-}
-
-.navigation{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    grid-area: "sidebar";
-    list-style-type: none;
-    text-align: center;
-    height: 100%;
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-    -webkit-text-stroke: 1px var(--dark);
 }
 
 .navigation > li{
@@ -116,11 +142,45 @@
     font-size: 0.75em;
 }
 
-.content{
+.content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+        "home"
+        "book"
+        "place"
+        "feedback";
+    row-gap: 20px;
+    padding: 20px 10px;
     grid-area: "content";
     max-width: 3fr;
     min-height: 3fr;
+    max-height: 70vh;
     overflow: scroll;
+}
+
+.content > section{
+    border: 2px dotted black; 
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    block-size: 100%;
+}
+
+#home{
+    grid-area: "home";
+}
+
+#favorite-book{
+    grid-area: "book";
+}
+
+#loved-place{
+    grid-area: "place";
+}
+
+#feedback-form{
+    grid-area: "feedback";
 }
 
 .footer{
