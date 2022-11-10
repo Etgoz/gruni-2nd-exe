@@ -7,20 +7,20 @@
         <link rel="stylesheet" href="./styles.css">
         <title>Etay Gozlan 2nd web app</title>
     </head>
-    <body id="body">
+    <body class="">
          <div class="container">
             <header class="header">
-                <span><a href="./index.html"><h1>🎹 Etay Gozlan</h1></a></span>
+                <span><a href="#home"><h1>🎹 Etay Gozlan</h1></a></span>
                 <span><img id="user-icon" src="./person-circle.svg" alt="person-circle"></span>
             </header>
             <nav class="sidebar">
                 <ul class="navigation">
                     <li>navigation</li>
-                    <li><a href="#" target="_blank">My favorite Book</a></li>
-                    <li><a href="#" target="_blank">A Place I Enjoyed</a></li>
-                    <li><a href="#" target="_blank">Feedback Form</a></li>
+                    <li><a href="#favorite-book">My favorite Book</a></li>
+                    <li><a href="#loved-place">A Place I Enjoyed</a></li>
+                    <li><a href="#feedback-form">Feedback Form</a></li>
                     <li><a href="./schools.html" target="_blank">My Schools</a></li>
-                    <li><a href="#" target="_blank">This Project on GitHab</a></li>
+                    <li><a href="https://github.com/Etgoz/gruni-2nd-exe" target="_blank">This Project on GitHab</a></li>
                 </ul>
             </nav>
             <content class="content">
@@ -50,11 +50,14 @@
                         <br/>
                         I like the book because it is really well written. The characters are very relateable and the story is both funny 
                         and sad and very touching
+                        <br/>
+                        <br/>
+                        <q>
+                            We always think there's enough time to do things with other people. 
+                            Time to say things to them. And then something happens and then we stand there holding on to words like 'if'.
+                        </q>
                     </p>
-                    <q>
-                        We always think there's enough time to do things with other people. 
-                        Time to say things to them. And then something happens and then we stand there holding on to words like 'if'.
-                    </q>
+                  
                 </section>
                 <section id="loved-place">
                     <h2>A place I enjoyed visiting - Isla Holbox, Quintana Roo, Mexico</h2>
@@ -65,7 +68,39 @@
                     </p>
                 </section>
                 <section id="feedback-form">
-
+                    <h1>Feedback Form</h1>
+                    <h2>I'd love to hear your honest thoughts!</h2>
+                    <form>
+                        <div>
+                            <H3>Personal Details</H3><br/>
+                            <label>
+                                Full name: <input type="text" name="name" />
+                            <label>
+                            <label>
+                                Phone number: <input type="tel" name="phone" />
+                            </label>
+                            <label>
+                                Email: <input type="email" name="email" />
+                            </label>
+                            <label>
+                                Date of birth: <input type="date" name="birth-date" />
+                            </label>
+                        </div>
+                        <div>
+                            <H3>Your Feedback</H3>
+                            <label>
+                                Rating: <input type="radio" name="rating" required/>
+                            </label>
+                            <label>
+                                How did you find this website: <input type="select" name="how-found" required/>
+                            </label>
+                            <label>
+                                Your massage: <input type="textarea" name="message" />
+                            </label>
+                        </div>
+                        <button id="submit-button" type="submit">Submit</button>
+                        <button id="reset-button" type="reset">Reset</button>
+                    </form>
                 </section>
             </content>
             <footer class="footer">
